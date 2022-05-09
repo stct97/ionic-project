@@ -9,7 +9,7 @@ import { PlacesService } from './places.service';
 })
 export class PlacesPage implements OnInit {
   places = [];
-  constructor(private placeService: PlacesService, private router:Router) {}
+  constructor(private placeService: PlacesService, private router: Router) {}
 
   ngOnInit() {
     this.places = this.placeService.getPlaces();
@@ -21,6 +21,10 @@ export class PlacesPage implements OnInit {
 
   addNewPlace() {
     this.router.navigate(['/newPlace']);
-    console.log("Añadiendo nuevo lugar");
+    console.log('Añadiendo nuevo lugar');
+  }
+
+  goToHome(){
+    this.router.navigate(['/home']);
   }
 }
